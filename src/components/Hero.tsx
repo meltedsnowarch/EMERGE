@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       data-design-id="hero"
-      className="flex flex-col justify-center px-6 md:px-10 lg:px-16 pt-28 md:pt-32 pb-10 md:pb-14"
+      className="flex flex-col justify-center px-6 md:px-10 lg:px-16 pt-28 md:pt-32 pb-4 md:pb-6"
     >
       <div data-design-id="hero-content" className="max-w-[920px]">
         <h1

@@ -9,6 +9,7 @@ function ServiceCard({
   description,
   services,
   designIdPrefix,
+  headerBg,
 }: {
   number: string;
   title: string;
@@ -16,6 +17,7 @@ function ServiceCard({
   description: string;
   services: { name: string; price: string; desc: string; designId: string }[];
   designIdPrefix: string;
+  headerBg: string;
 }) {
   const [open, setOpen] = useState(false);
 
@@ -27,7 +29,8 @@ function ServiceCard({
       <button
         type="button"
         data-design-id={`${designIdPrefix}-toggle`}
-        className="w-full text-left p-6 md:p-8 cursor-pointer group bg-[#F0F0F0]"
+        className="w-full text-left p-6 md:p-8 cursor-pointer group"
+        style={{ backgroundColor: headerBg }}
         onClick={() => setOpen(!open)}
       >
         <div data-design-id={`${designIdPrefix}-header`} className="flex items-start justify-between">
@@ -124,7 +127,7 @@ export default function ServiceBuckets() {
   return (
     <section
       data-design-id="services"
-      className="px-6 md:px-10 lg:px-16 py-24 md:py-32"
+      className="px-6 md:px-10 lg:px-16 pt-6 md:pt-8 pb-24 md:pb-32"
     >
       <div data-design-id="services-grid" className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 items-start">
         <ServiceCard
@@ -133,6 +136,7 @@ export default function ServiceBuckets() {
           subtitle="Know your numbers."
           description="Accurate cost estimates grounded in current market data. Give your clients confidence at every stage, from feasibility through to tender."
           designIdPrefix="service-cost"
+          headerBg="#C8BFB0"
           services={[
             {
               name: "Design Stage Costing",
@@ -161,6 +165,7 @@ export default function ServiceBuckets() {
           subtitle="Navigate planning with confidence."
           description="Professionally drafted planning reports and compliance documentation. Submit with confidence knowing the detail is right."
           designIdPrefix="service-planning"
+          headerBg="#B8A99A"
           services={[
             {
               name: "Planning & Design Statement Standard",
@@ -189,6 +194,7 @@ export default function ServiceBuckets() {
           subtitle="Win the project."
           description="Presentation-ready project documents that make the case clearly. From design reports to client proposals, we help you win the work."
           designIdPrefix="service-studio"
+          headerBg="#D4CCC4"
           services={[
             {
               name: "Feasibility Report",
