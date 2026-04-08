@@ -25,19 +25,6 @@ export default function Hero() {
           AI-assisted cost estimating, planning reports and project support for
           sole practitioners and small practices in Ireland.
         </p>
-
-        <div
-          data-design-id="hero-ctas"
-          className="mt-12 md:mt-16"
-        >
-          <a
-            href="#contact"
-            data-design-id="hero-cta-getstarted"
-            className="inline-flex items-center justify-center text-[0.78rem] tracking-[0.12em] uppercase font-medium text-primary-foreground bg-foreground px-9 py-4 hover:bg-foreground/85 transition-colors duration-300"
-          >
-            Get Started
-          </a>
-        </div>
       </div>
     </section>
   );

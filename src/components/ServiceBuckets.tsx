@@ -22,12 +22,12 @@ function ServiceCard({
   return (
     <div
       data-design-id={`${designIdPrefix}-card`}
-      className="bg-background border-b border-border/40 last:border-b-0"
+      className="flex flex-col"
     >
       <button
         type="button"
         data-design-id={`${designIdPrefix}-toggle`}
-        className="w-full text-left p-8 md:p-10 lg:p-14 cursor-pointer group"
+        className="w-full text-left p-6 md:p-8 cursor-pointer group bg-[#F0F0F0]"
         onClick={() => setOpen(!open)}
       >
         <div data-design-id={`${designIdPrefix}-header`} className="flex items-start justify-between">
@@ -40,26 +40,26 @@ function ServiceCard({
             </span>
             <h3
               data-design-id={`${designIdPrefix}-title`}
-              className="mt-6 font-serif text-[1.5rem] md:text-[1.65rem] tracking-tightest font-light"
+              className="mt-4 font-serif text-[1.3rem] md:text-[1.5rem] tracking-tightest font-light"
             >
               {title}
             </h3>
             <p
               data-design-id={`${designIdPrefix}-subtitle`}
-              className="mt-1.5 text-[0.92rem] font-serif italic text-foreground/45"
+              className="mt-1.5 text-[0.85rem] font-serif italic text-foreground/45"
             >
               {subtitle}
             </p>
             <p
               data-design-id={`${designIdPrefix}-description`}
-              className="mt-6 text-[0.85rem] leading-[1.7] text-foreground/50 font-light max-w-[480px]"
+              className="mt-4 text-[0.8rem] leading-[1.7] text-foreground/50 font-light"
             >
               {description}
             </p>
           </div>
           <span
             data-design-id={`${designIdPrefix}-icon`}
-            className={`ml-6 mt-6 shrink-0 text-foreground/30 text-[1.3rem] font-light transition-transform duration-300 ${open ? "rotate-45" : ""}`}
+            className={`ml-4 mt-4 shrink-0 text-foreground/30 text-[1.3rem] font-light transition-transform duration-300 ${open ? "rotate-45" : ""}`}
           >
             +
           </span>
@@ -73,41 +73,41 @@ function ServiceCard({
         <div className="overflow-hidden">
           <div
             data-design-id={`${designIdPrefix}-services`}
-            className="px-8 md:px-10 lg:px-14 pb-10 md:pb-14 pt-2 flex flex-col gap-0"
+            className="px-6 md:px-8 pb-8 pt-2 flex flex-col gap-0"
           >
             {services.map((svc) => (
               <div
                 key={svc.designId}
                 data-design-id={svc.designId}
-                className="py-6 border-t border-border/30"
+                className="py-5 border-t border-border/30"
               >
                 <div
                   data-design-id={`${svc.designId}-top`}
-                  className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1"
+                  className="flex flex-col gap-1"
                 >
                   <span
                     data-design-id={`${svc.designId}-name`}
-                    className="text-[0.92rem] font-light text-foreground/80"
+                    className="text-[0.88rem] font-light text-foreground/80"
                   >
                     {svc.name}
                   </span>
                   <span
                     data-design-id={`${svc.designId}-price`}
-                    className="text-[0.92rem] font-medium text-foreground tracking-tight"
+                    className="text-[0.88rem] font-medium text-foreground tracking-tight"
                   >
                     {svc.price}
                   </span>
                 </div>
                 <p
                   data-design-id={`${svc.designId}-desc`}
-                  className="mt-2 text-[0.82rem] leading-[1.7] text-foreground/40 font-light max-w-[520px]"
+                  className="mt-2 text-[0.78rem] leading-[1.7] text-foreground/40 font-light"
                 >
                   {svc.desc}
                 </p>
                 <a
                   href="#"
                   data-design-id={`${svc.designId}-cta`}
-                  className="mt-4 inline-flex items-center justify-center text-[0.72rem] tracking-[0.12em] uppercase font-medium text-primary-foreground bg-foreground px-7 py-3 hover:bg-foreground/85 transition-colors duration-300"
+                  className="mt-4 inline-flex items-center justify-center text-[0.7rem] tracking-[0.12em] uppercase font-medium text-primary-foreground bg-foreground px-6 py-2.5 hover:bg-foreground/85 transition-colors duration-300"
                 >
                   Get Started
                 </a>
@@ -126,7 +126,7 @@ export default function ServiceBuckets() {
       data-design-id="services"
       className="px-6 md:px-10 lg:px-16 py-24 md:py-32"
     >
-      <div data-design-id="services-list" className="border-t border-border/40">
+      <div data-design-id="services-grid" className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 items-start">
         <ServiceCard
           number="01"
           title="EMERGE Cost"
