@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       data-design-id="hero"
-      className="min-h-[100svh] flex flex-col justify-center px-6 md:px-10 lg:px-16 pt-24 pb-20"
+      className="flex flex-col justify-center px-6 md:px-10 lg:px-16 pt-28 md:pt-32 pb-24 md:pb-32"
     >
       <div data-design-id="hero-content" className="max-w-[920px]">
         <h1
@@ -23,7 +23,7 @@ export default function Hero() {
           className="mt-8 md:mt-12 text-[clamp(0.95rem,1.5vw,1.12rem)] leading-[1.7] text-foreground/50 max-w-[520px] font-light"
         >
           AI-assisted cost estimating, planning reports and project support for
-          sole practitioners and small practices.
+          sole practitioners and small practices in Ireland.
         </p>
 
         <div
@@ -31,7 +31,7 @@ export default function Hero() {
           className="mt-12 md:mt-16"
         >
           <a
-            href="#"
+            href="#contact"
             data-design-id="hero-cta-getstarted"
             className="inline-flex items-center justify-center text-[0.78rem] tracking-[0.12em] uppercase font-medium text-primary-foreground bg-foreground px-9 py-4 hover:bg-foreground/85 transition-colors duration-300"
           >

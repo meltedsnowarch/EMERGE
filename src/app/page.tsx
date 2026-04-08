@@ -2,8 +2,10 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import CredibilityBar from "@/components/CredibilityBar";
 import ServiceBuckets from "@/components/ServiceBuckets";
+import PricingSnapshot from "@/components/PricingSnapshot";
 import HowItWorks from "@/components/HowItWorks";
 import TrustStatement from "@/components/TrustStatement";
+import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -13,8 +15,10 @@ export default function Home() {
       <Hero />
       <CredibilityBar />
       <ServiceBuckets />
+      <PricingSnapshot />
       <HowItWorks />
       <TrustStatement />
+      <ContactCTA />
       <Footer />
     </main>
   );
