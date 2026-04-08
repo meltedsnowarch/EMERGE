@@ -1,9 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ServiceBuckets from "@/components/ServiceBuckets";
-import HowItWorks from "@/components/HowItWorks";
-import TrustStatement from "@/components/TrustStatement";
-import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -12,9 +9,6 @@ export default function Home() {
       <Header />
       <Hero />
       <ServiceBuckets />
-      <HowItWorks />
-      <TrustStatement />
-      <ContactCTA />
       <Footer />
     </main>
   );
