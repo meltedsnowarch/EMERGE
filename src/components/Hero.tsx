@@ -28,21 +28,14 @@ export default function Hero() {
 
         <div
           data-design-id="hero-ctas"
-          className="mt-12 md:mt-16 flex flex-col sm:flex-row gap-4"
+          className="mt-12 md:mt-16"
         >
           <a
             href="#"
-            data-design-id="hero-cta-architect"
+            data-design-id="hero-cta-getstarted"
             className="inline-flex items-center justify-center text-[0.78rem] tracking-[0.12em] uppercase font-medium text-primary-foreground bg-foreground px-9 py-4 hover:bg-foreground/85 transition-colors duration-300"
           >
-            I am an Architect
-          </a>
-          <a
-            href="#"
-            data-design-id="hero-cta-builder"
-            className="inline-flex items-center justify-center text-[0.78rem] tracking-[0.12em] uppercase font-medium text-foreground border border-foreground/20 px-9 py-4 hover:border-foreground/50 transition-colors duration-300"
-          >
-            I am a Builder
+            Get Started
           </a>
         </div>
       </div>

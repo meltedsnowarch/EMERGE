@@ -36,13 +36,6 @@ export default function Footer() {
           </a>
           <a
             href="#"
-            data-design-id="footer-link-builders"
-            className="text-[0.72rem] tracking-[0.12em] text-foreground/40 hover:text-foreground transition-colors duration-300 uppercase"
-          >
-            Builders
-          </a>
-          <a
-            href="#"
             data-design-id="footer-link-contact"
             className="text-[0.72rem] tracking-[0.12em] text-foreground/40 hover:text-foreground transition-colors duration-300 uppercase"
           >

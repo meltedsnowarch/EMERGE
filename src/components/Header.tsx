@@ -35,13 +35,6 @@ export default function Header() {
           </a>
           <a
             href="#"
-            data-design-id="header-link-builders"
-            className="text-[0.82rem] tracking-wide text-foreground/70 hover:text-foreground transition-colors duration-300 uppercase"
-          >
-            Builders
-          </a>
-          <a
-            href="#"
             data-design-id="header-link-contact"
             className="text-[0.82rem] tracking-wide text-foreground/70 hover:text-foreground transition-colors duration-300 uppercase"
           >
@@ -94,13 +87,6 @@ export default function Header() {
             className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors uppercase"
           >
             Architects
-          </a>
-          <a
-            href="#"
-            data-design-id="header-mobile-link-builders"
-            className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors uppercase"
-          >
-            Builders
           </a>
           <a
             href="#"
