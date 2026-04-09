@@ -3,21 +3,19 @@
 import { useState } from "react";
 
 function ServiceCard({
-  number,
   title,
-  subtitle,
   description,
   services,
   designIdPrefix,
   headerBg,
+  panelBg,
 }: {
-  number: string;
   title: string;
-  subtitle: string;
   description: string;
   services: { name: string; price: string; desc: string; designId: string }[];
   designIdPrefix: string;
   headerBg: string;
+  panelBg: string;
 }) {
   const [open, setOpen] = useState(false);
 
@@ -35,30 +33,16 @@ function ServiceCard({
       >
         <div data-design-id={`${designIdPrefix}-header`} className="flex items-start justify-between">
           <div data-design-id={`${designIdPrefix}-header-left`}>
-            <span
-              data-design-id={`${designIdPrefix}-label`}
-              className="text-[0.7rem] tracking-[0.16em] uppercase font-medium"
-              style={{ color: "#1A1A1A", opacity: 0.45 }}
-            >
-              {number}
-            </span>
             <h3
               data-design-id={`${designIdPrefix}-title`}
-              className="mt-4 font-serif text-[1.3rem] md:text-[1.5rem] tracking-tightest font-light"
+              className="font-serif text-[1.3rem] md:text-[1.5rem] tracking-tightest font-bold"
               style={{ color: "#1A1A1A" }}
             >
               {title}
             </h3>
             <p
-              data-design-id={`${designIdPrefix}-subtitle`}
-              className="mt-1.5 text-[0.85rem] font-serif italic"
-              style={{ color: "#1A1A1A", opacity: 0.65 }}
-            >
-              {subtitle}
-            </p>
-            <p
               data-design-id={`${designIdPrefix}-description`}
-              className="mt-4 text-[0.8rem] leading-[1.7] font-light"
+              className="mt-4 text-[0.8rem] leading-[1.7] font-serif"
               style={{ color: "#1A1A1A", opacity: 0.7 }}
             >
               {description}
@@ -66,7 +50,7 @@ function ServiceCard({
           </div>
           <span
             data-design-id={`${designIdPrefix}-icon`}
-            className={`ml-4 mt-4 shrink-0 text-[1.3rem] font-light transition-transform duration-300 ${open ? "rotate-45" : ""}`}
+            className={`ml-4 shrink-0 text-[1.3rem] font-light transition-transform duration-300 ${open ? "rotate-45" : ""}`}
             style={{ color: "#1A1A1A", opacity: 0.45 }}
           >
             +
@@ -82,12 +66,13 @@ function ServiceCard({
           <div
             data-design-id={`${designIdPrefix}-services`}
             className="px-6 md:px-8 pb-8 pt-2 flex flex-col gap-0"
+            style={{ backgroundColor: panelBg }}
           >
             {services.map((svc) => (
               <div
                 key={svc.designId}
                 data-design-id={svc.designId}
-                className="py-5 border-t border-border/30"
+                className="py-5 border-t border-[#1A1A1A]/10"
               >
                 <div
                   data-design-id={`${svc.designId}-top`}
@@ -140,12 +125,11 @@ export default function ServiceBuckets() {
     >
       <div data-design-id="services-grid" className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 items-start">
         <ServiceCard
-          number="01"
           title="EMERGE Cost"
-          subtitle="Know your numbers."
           description="Accurate cost estimates grounded in current market data. Give your clients confidence at every stage, from feasibility through to tender."
           designIdPrefix="service-cost"
           headerBg="#DDD8D0"
+          panelBg="#EDE9E4"
           services={[
             {
               name: "Design Stage Costing",
@@ -169,12 +153,11 @@ export default function ServiceBuckets() {
         />
 
         <ServiceCard
-          number="02"
           title="EMERGE Planning"
-          subtitle="Navigate planning with confidence."
           description="Professionally drafted planning reports and compliance documentation. Submit with confidence knowing the detail is right."
           designIdPrefix="service-planning"
           headerBg="#D4C9BC"
+          panelBg="#E8E0D8"
           services={[
             {
               name: "Planning & Design Statement Standard",
@@ -198,12 +181,11 @@ export default function ServiceBuckets() {
         />
 
         <ServiceCard
-          number="03"
           title="EMERGE Studio"
-          subtitle="Win the project."
           description="Presentation-ready project documents that make the case clearly. From design reports to client proposals, we help you win the work."
           designIdPrefix="service-studio"
           headerBg="#E2DDD8"
+          panelBg="#EFECE8"
           services={[
             {
               name: "Feasibility Report",
