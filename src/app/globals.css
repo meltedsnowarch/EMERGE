@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 37.5 24.2% 87.1%;
+    --background: 0 0% 100%;
     --foreground: 0 0% 10.2%;
     --card: 37.5 24.2% 87.1%;
     --card-foreground: 0 0% 10.2%;
@@ -44,5 +44,5 @@ html {
 
 ::selection {
   background-color: #1A1A1A;
-  color: #E6E0D6;
+  color: #FFFFFF;
 }

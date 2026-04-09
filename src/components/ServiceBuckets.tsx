@@ -124,7 +124,7 @@ export default function ServiceBuckets() {
           description="Accurate cost estimates grounded in current market data. Give your clients confidence at every stage, from feasibility through to tender."
           designIdPrefix="service-cost"
           headerBg="#D4C9BC"
-          panelBg="#E6E0D6"
+          panelBg="#D4C9BC"
           services={[
             {
               name: "Design Stage Costing",
@@ -152,7 +152,7 @@ export default function ServiceBuckets() {
           description="Professionally drafted planning reports and compliance documentation. Submit with confidence knowing the detail is right."
           designIdPrefix="service-planning"
           headerBg="#DAD0C5"
-          panelBg="#E6E0D6"
+          panelBg="#DAD0C5"
           services={[
             {
               name: "Planning & Design Statement (Basic)",
@@ -180,7 +180,7 @@ export default function ServiceBuckets() {
           description="Presentation-ready project documents that make the case clearly. From design reports to client proposals, we help you win the work."
           designIdPrefix="service-studio"
           headerBg="#E0D8CE"
-          panelBg="#E6E0D6"
+          panelBg="#E0D8CE"
           services={[
             {
               name: "Feasibility Report",
