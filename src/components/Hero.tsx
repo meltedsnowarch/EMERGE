@@ -22,8 +22,9 @@ export default function Hero() {
           data-design-id="hero-subheading"
           className="mt-8 md:mt-12 text-[clamp(0.95rem,1.5vw,1.12rem)] leading-[1.7] text-foreground/50 max-w-[520px] font-light"
         >
-          AI-assisted cost estimating, planning reports and project support for
-          sole practitioners and small practices in Ireland.
+          RIAI Architect-led, AI-assisted practice support — cost estimating,
+          planning reports and project documents for sole practitioners and
+          small practices in Ireland.
         </p>
       </div>
     </section>

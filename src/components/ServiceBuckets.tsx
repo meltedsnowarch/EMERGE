@@ -22,7 +22,7 @@ function ServiceCard({
   return (
     <div
       data-design-id={`${designIdPrefix}-card`}
-      className="flex flex-col"
+      className="flex flex-col h-full"
     >
       <button
         type="button"
@@ -60,13 +60,13 @@ function ServiceCard({
 
       <div
         data-design-id={`${designIdPrefix}-panel`}
-        className={`grid transition-all duration-300 ease-in-out ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+        className={`flex-1 grid transition-all duration-300 ease-in-out ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+        style={{ backgroundColor: panelBg }}
       >
         <div className="overflow-hidden">
           <div
             data-design-id={`${designIdPrefix}-services`}
             className="px-6 md:px-8 pb-6 pt-2 flex flex-col gap-0"
-            style={{ backgroundColor: panelBg }}
           >
             {services.map((svc) => (
               <div
@@ -92,7 +92,7 @@ function ServiceCard({
                   href="#"
                   data-design-id={`${svc.designId}-cta`}
                   className="mt-4 inline-flex items-center justify-center text-[0.7rem] tracking-[0.12em] uppercase font-medium px-6 py-2.5 transition-colors duration-300"
-                  style={{ backgroundColor: "#1A1A1A", color: "#FFFFFF" }}
+                  style={{ backgroundColor: "#D4C9BC", color: "#1A1A1A" }}
                 >
                   {svc.price}
                 </a>
@@ -118,7 +118,7 @@ export default function ServiceBuckets() {
       data-design-id="services"
       className="px-6 md:px-10 lg:px-16 pt-6 md:pt-8 pb-6 md:pb-8"
     >
-      <div data-design-id="services-grid" className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 items-start">
+      <div data-design-id="services-grid" className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 items-stretch">
         <ServiceCard
           title="EMERGE Cost"
           description="Accurate cost estimates grounded in current market data. Give your clients confidence at every stage, from feasibility through to tender."
