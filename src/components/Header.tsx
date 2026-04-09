@@ -80,7 +80,7 @@ export default function Header() {
         <nav
           data-design-id="header-nav-mobile"
           className="md:hidden border-t px-6 py-8 flex flex-col gap-6"
-          style={{ backgroundColor: "#F5F0EB", borderColor: "rgba(26, 26, 26, 0.1)" }}
+          style={{ backgroundColor: "#EEE7E0", borderColor: "rgba(26, 26, 26, 0.1)" }}
         >
           <a
             href="#"
