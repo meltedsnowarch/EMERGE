@@ -35,10 +35,10 @@ export default function Header() {
           </a>
           <a
             href="#"
-            data-design-id="header-cta-submit"
-            className="text-[0.82rem] tracking-wide text-primary-foreground bg-foreground px-5 py-2.5 hover:bg-foreground/85 transition-colors duration-300 uppercase"
+            data-design-id="header-link-about"
+            className="text-[0.82rem] tracking-wide text-foreground/70 hover:text-foreground transition-colors duration-300 uppercase"
           >
-            Submit Drawings
+            About
           </a>
         </nav>
 
@@ -83,10 +83,10 @@ export default function Header() {
           </a>
           <a
             href="#"
-            data-design-id="header-mobile-cta-submit"
-            className="text-sm tracking-wide text-primary-foreground bg-foreground px-5 py-3 text-center hover:bg-foreground/85 transition-colors uppercase"
+            data-design-id="header-mobile-link-about"
+            className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors uppercase"
           >
-            Submit Drawings
+            About
           </a>
         </nav>
       )}

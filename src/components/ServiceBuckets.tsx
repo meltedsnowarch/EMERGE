@@ -29,40 +29,45 @@ function ServiceCard({
       <button
         type="button"
         data-design-id={`${designIdPrefix}-toggle`}
-        className="w-full text-left p-6 md:p-8 cursor-pointer group"
-        style={{ backgroundColor: headerBg }}
+        className="w-full text-left px-6 md:px-8 py-12 cursor-pointer group"
+        style={{ backgroundColor: headerBg, color: "#1A1A1A" }}
         onClick={() => setOpen(!open)}
       >
         <div data-design-id={`${designIdPrefix}-header`} className="flex items-start justify-between">
           <div data-design-id={`${designIdPrefix}-header-left`}>
             <span
               data-design-id={`${designIdPrefix}-label`}
-              className="text-[0.7rem] tracking-[0.16em] uppercase text-foreground/30 font-medium"
+              className="text-[0.7rem] tracking-[0.16em] uppercase font-medium"
+              style={{ color: "#1A1A1A", opacity: 0.45 }}
             >
               {number}
             </span>
             <h3
               data-design-id={`${designIdPrefix}-title`}
               className="mt-4 font-serif text-[1.3rem] md:text-[1.5rem] tracking-tightest font-light"
+              style={{ color: "#1A1A1A" }}
             >
               {title}
             </h3>
             <p
               data-design-id={`${designIdPrefix}-subtitle`}
-              className="mt-1.5 text-[0.85rem] font-serif italic text-foreground/45"
+              className="mt-1.5 text-[0.85rem] font-serif italic"
+              style={{ color: "#1A1A1A", opacity: 0.65 }}
             >
               {subtitle}
             </p>
             <p
               data-design-id={`${designIdPrefix}-description`}
-              className="mt-4 text-[0.8rem] leading-[1.7] text-foreground/50 font-light"
+              className="mt-4 text-[0.8rem] leading-[1.7] font-light"
+              style={{ color: "#1A1A1A", opacity: 0.7 }}
             >
               {description}
             </p>
           </div>
           <span
             data-design-id={`${designIdPrefix}-icon`}
-            className={`ml-4 mt-4 shrink-0 text-foreground/30 text-[1.3rem] font-light transition-transform duration-300 ${open ? "rotate-45" : ""}`}
+            className={`ml-4 mt-4 shrink-0 text-[1.3rem] font-light transition-transform duration-300 ${open ? "rotate-45" : ""}`}
+            style={{ color: "#1A1A1A", opacity: 0.45 }}
           >
             +
           </span>
@@ -90,27 +95,31 @@ function ServiceCard({
                 >
                   <span
                     data-design-id={`${svc.designId}-name`}
-                    className="text-[0.88rem] font-light text-foreground/80"
+                    className="text-[0.88rem] font-light"
+                    style={{ color: "#1A1A1A" }}
                   >
                     {svc.name}
                   </span>
                   <span
                     data-design-id={`${svc.designId}-price`}
-                    className="text-[0.88rem] font-medium text-foreground tracking-tight"
+                    className="text-[0.88rem] font-medium tracking-tight"
+                    style={{ color: "#1A1A1A" }}
                   >
                     {svc.price}
                   </span>
                 </div>
                 <p
                   data-design-id={`${svc.designId}-desc`}
-                  className="mt-2 text-[0.78rem] leading-[1.7] text-foreground/40 font-light"
+                  className="mt-2 text-[0.78rem] leading-[1.7] font-light"
+                  style={{ color: "#1A1A1A", opacity: 0.6 }}
                 >
                   {svc.desc}
                 </p>
                 <a
                   href="#"
                   data-design-id={`${svc.designId}-cta`}
-                  className="mt-4 inline-flex items-center justify-center text-[0.7rem] tracking-[0.12em] uppercase font-medium text-primary-foreground bg-foreground px-6 py-2.5 hover:bg-foreground/85 transition-colors duration-300"
+                  className="mt-4 inline-flex items-center justify-center text-[0.7rem] tracking-[0.12em] uppercase font-medium px-6 py-2.5 transition-colors duration-300"
+                  style={{ backgroundColor: "#1A1A1A", color: "#FFFFFF" }}
                 >
                   Get Started
                 </a>
@@ -127,7 +136,7 @@ export default function ServiceBuckets() {
   return (
     <section
       data-design-id="services"
-      className="px-6 md:px-10 lg:px-16 pt-6 md:pt-8 pb-24 md:pb-32"
+      className="px-6 md:px-10 lg:px-16 pt-6 md:pt-8 pb-10 md:pb-14"
     >
       <div data-design-id="services-grid" className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 items-start">
         <ServiceCard
@@ -136,7 +145,7 @@ export default function ServiceBuckets() {
           subtitle="Know your numbers."
           description="Accurate cost estimates grounded in current market data. Give your clients confidence at every stage, from feasibility through to tender."
           designIdPrefix="service-cost"
-          headerBg="#C8BFB0"
+          headerBg="#DDD8D0"
           services={[
             {
               name: "Design Stage Costing",
@@ -165,7 +174,7 @@ export default function ServiceBuckets() {
           subtitle="Navigate planning with confidence."
           description="Professionally drafted planning reports and compliance documentation. Submit with confidence knowing the detail is right."
           designIdPrefix="service-planning"
-          headerBg="#B8A99A"
+          headerBg="#D4C9BC"
           services={[
             {
               name: "Planning & Design Statement Standard",
@@ -194,7 +203,7 @@ export default function ServiceBuckets() {
           subtitle="Win the project."
           description="Presentation-ready project documents that make the case clearly. From design reports to client proposals, we help you win the work."
           designIdPrefix="service-studio"
-          headerBg="#D4CCC4"
+          headerBg="#E2DDD8"
           services={[
             {
               name: "Feasibility Report",
