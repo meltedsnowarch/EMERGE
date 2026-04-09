@@ -35,14 +35,14 @@ function ServiceCard({
           <div data-design-id={`${designIdPrefix}-header-left`}>
             <h3
               data-design-id={`${designIdPrefix}-title`}
-              className="font-serif text-[1.3rem] md:text-[1.5rem] tracking-tightest font-bold"
+              className="font-serif text-[1.3rem] md:text-[1.5rem] tracking-tightest font-normal"
               style={{ color: "#1A1A1A" }}
             >
               {title}
             </h3>
             <p
               data-design-id={`${designIdPrefix}-description`}
-              className="mt-4 text-[0.8rem] leading-[1.7] font-serif"
+              className="mt-4 text-[0.8rem] leading-[1.7] font-serif italic"
               style={{ color: "#1A1A1A", opacity: 0.7 }}
             >
               {description}
@@ -65,7 +65,7 @@ function ServiceCard({
         <div className="overflow-hidden">
           <div
             data-design-id={`${designIdPrefix}-services`}
-            className="px-6 md:px-8 pb-8 pt-2 flex flex-col gap-0"
+            className="px-6 md:px-8 pb-6 pt-2 flex flex-col gap-0"
             style={{ backgroundColor: panelBg }}
           >
             {services.map((svc) => (
@@ -74,29 +74,17 @@ function ServiceCard({
                 data-design-id={svc.designId}
                 className="py-5 border-t border-[#1A1A1A]/10"
               >
-                <div
-                  data-design-id={`${svc.designId}-top`}
-                  className="flex flex-col gap-1"
+                <span
+                  data-design-id={`${svc.designId}-name`}
+                  className="text-[0.95rem] font-semibold"
+                  style={{ color: "#1A1A1A" }}
                 >
-                  <span
-                    data-design-id={`${svc.designId}-name`}
-                    className="text-[0.88rem] font-light"
-                    style={{ color: "#1A1A1A" }}
-                  >
-                    {svc.name}
-                  </span>
-                  <span
-                    data-design-id={`${svc.designId}-price`}
-                    className="text-[0.88rem] font-medium tracking-tight"
-                    style={{ color: "#1A1A1A" }}
-                  >
-                    {svc.price}
-                  </span>
-                </div>
+                  {svc.name}
+                </span>
                 <p
                   data-design-id={`${svc.designId}-desc`}
-                  className="mt-2 text-[0.78rem] leading-[1.7] font-light"
-                  style={{ color: "#1A1A1A", opacity: 0.6 }}
+                  className="mt-2 text-[0.8rem] leading-[1.7] font-light"
+                  style={{ color: "#2A2A2A" }}
                 >
                   {svc.desc}
                 </p>
@@ -106,10 +94,17 @@ function ServiceCard({
                   className="mt-4 inline-flex items-center justify-center text-[0.7rem] tracking-[0.12em] uppercase font-medium px-6 py-2.5 transition-colors duration-300"
                   style={{ backgroundColor: "#1A1A1A", color: "#FFFFFF" }}
                 >
-                  Get Started
+                  {svc.price}
                 </a>
               </div>
             ))}
+            <p
+              data-design-id={`${designIdPrefix}-vat`}
+              className="pt-3 text-[0.7rem]"
+              style={{ color: "#999999" }}
+            >
+              All prices + VAT
+            </p>
           </div>
         </div>
       </div>
@@ -121,7 +116,7 @@ export default function ServiceBuckets() {
   return (
     <section
       data-design-id="services"
-      className="px-6 md:px-10 lg:px-16 pt-6 md:pt-8 pb-10 md:pb-14"
+      className="px-6 md:px-10 lg:px-16 pt-6 md:pt-8 pb-6 md:pb-8"
     >
       <div data-design-id="services-grid" className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 items-start">
         <ServiceCard
@@ -134,19 +129,19 @@ export default function ServiceBuckets() {
             {
               name: "Design Stage Costing",
               price: "€300",
-              desc: "Outline cost estimate for pre-planning feasibility and budget setting.",
+              desc: "Outline cost estimate for early stage feasibility and budget setting.",
               designId: "service-cost-item-1",
             },
             {
               name: "Pre-Tender Detailed Cost Estimate",
               price: "€600",
-              desc: "Detailed estimate with preliminaries, attendances and blank tender template.",
+              desc: "Detailed cost estimate with prelims, attendances ready for tender stage.",
               designId: "service-cost-item-2",
             },
             {
               name: "Post-Tender Analysis",
               price: "€300",
-              desc: "Compare submitted tenders, highlights discrepancies and recommendations for appointment.",
+              desc: "Compare submitted tenders and report on findings.",
               designId: "service-cost-item-3",
             },
           ]}
@@ -160,21 +155,21 @@ export default function ServiceBuckets() {
           panelBg="#E8E0D8"
           services={[
             {
-              name: "Planning & Design Statement Standard",
-              price: "€250–€350",
+              name: "Planning & Design Statement (Basic)",
+              price: "€400",
               desc: "Narrative planning report for standard residential application.",
               designId: "service-planning-item-1",
             },
             {
-              name: "Planning & Design Statement ACA / Protected Structure",
-              price: "€400–€500",
-              desc: "Enhanced report for sensitive planning contexts.",
+              name: "Planning & Design Statement (Detailed)",
+              price: "€800",
+              desc: "Narrative planning report for complex residential application.",
               designId: "service-planning-item-2",
             },
             {
               name: "Response to Further Information",
-              price: "€150–€250",
-              desc: "Urgent response to planning authority queries during assessment.",
+              price: "€150",
+              desc: "Prepare report letter in response to RFI.",
               designId: "service-planning-item-3",
             },
           ]}
@@ -190,13 +185,13 @@ export default function ServiceBuckets() {
             {
               name: "Feasibility Report",
               price: "€500",
-              desc: "Site and brief assessment, planning constraints, budget reality check, key risks and opportunities.",
+              desc: "Site and brief assessment, planning considerations, budget estimate.",
               designId: "service-studio-item-1",
             },
             {
               name: "Concept Document / Project Brief Response",
               price: "€500",
-              desc: "Written design narrative, precedent references, spatial thinking and design intent.",
+              desc: "Design narrative, pre-planning response and design intent.",
               designId: "service-studio-item-2",
             },
           ]}
