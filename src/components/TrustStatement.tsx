@@ -2,7 +2,7 @@ export default function TrustStatement() {
   return (
     <section
       data-design-id="trust"
-      className="px-6 md:px-10 lg:px-16 py-24 md:py-32 border-t border-border/60 bg-[#f6f5f3]"
+      className="px-6 md:px-10 lg:px-16 py-24 md:py-32 border-t border-border/60 bg-[#E6E0D6]"
     >
       <div data-design-id="trust-content" className="max-w-[660px]">
         <span

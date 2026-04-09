@@ -92,7 +92,7 @@ function ServiceCard({
                   href="#"
                   data-design-id={`${svc.designId}-cta`}
                   className="mt-4 inline-flex items-center justify-center text-[0.7rem] tracking-[0.12em] uppercase font-medium px-6 py-2.5 transition-colors duration-300"
-                  style={{ backgroundColor: "#8A9A8A", color: "#2F3438" }}
+                  style={{ backgroundColor: headerBg, color: "#2F3438" }}
                 >
                   {svc.price}
                 </a>
@@ -101,7 +101,7 @@ function ServiceCard({
             <p
               data-design-id={`${designIdPrefix}-vat`}
               className="pt-3 text-[0.7rem]"
-              style={{ color: "#999999" }}
+              style={{ color: "rgba(47, 52, 56, 0.45)" }}
             >
               All prices + VAT
             </p>
@@ -123,8 +123,8 @@ export default function ServiceBuckets() {
           title="EMERGE Cost"
           description="Accurate cost estimates grounded in current market data. Give your clients confidence at every stage, from feasibility through to tender."
           designIdPrefix="service-cost"
-          headerBg="#8A9A8A"
-          panelBg="#C4CFCF"
+          headerBg="#E8D6D0"
+          panelBg="#F0E4E0"
           services={[
             {
               name: "Design Stage Costing",
@@ -151,8 +151,8 @@ export default function ServiceBuckets() {
           title="EMERGE Planning"
           description="Professionally drafted planning reports and compliance documentation. Submit with confidence knowing the detail is right."
           designIdPrefix="service-planning"
-          headerBg="#8A9A8A"
-          panelBg="#C4CFCF"
+          headerBg="#F1E6DE"
+          panelBg="#F7F0EA"
           services={[
             {
               name: "Planning & Design Statement (Basic)",
@@ -179,8 +179,8 @@ export default function ServiceBuckets() {
           title="EMERGE Studio"
           description="Presentation-ready project documents that make the case clearly. From design reports to client proposals, we help you win the work."
           designIdPrefix="service-studio"
-          headerBg="#8A9A8A"
-          panelBg="#C4CFCF"
+          headerBg="#E8D6D0"
+          panelBg="#F0E4E0"
           services={[
             {
               name: "Feasibility Report",
