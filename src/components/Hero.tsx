@@ -7,7 +7,8 @@ export default function Hero() {
       <div data-design-id="hero-content" className="max-w-[920px]">
         <h1
           data-design-id="hero-tagline"
-          className="font-serif text-[clamp(2.2rem,5.8vw,4.2rem)] leading-[1.08] tracking-tightest text-foreground font-light"
+          className="font-serif text-[clamp(2.2rem,5.8vw,4.2rem)] leading-[1.08] tracking-tightest font-light"
+          style={{ color: "#2F3438" }}
         >
           You trained as an architect
           <br data-design-id="hero-br-1" />
@@ -20,13 +21,15 @@ export default function Hero() {
 
         <p
           data-design-id="hero-subheading-1"
-          className="mt-8 md:mt-12 text-[clamp(0.95rem,1.5vw,1.12rem)] leading-[1.7] text-foreground/50 max-w-[520px] font-light"
+          className="mt-8 md:mt-12 text-[clamp(0.95rem,1.5vw,1.12rem)] leading-[1.7] max-w-[520px] font-light"
+          style={{ color: "rgba(47, 52, 56, 0.55)" }}
         >
           RIAI Architect-led, AI-assisted practice support.
         </p>
         <p
           data-design-id="hero-subheading-2"
-          className="mt-2 text-[clamp(0.95rem,1.5vw,1.12rem)] leading-[1.7] text-foreground/50 max-w-[520px] font-light"
+          className="mt-2 text-[clamp(0.95rem,1.5vw,1.12rem)] leading-[1.7] max-w-[520px] font-light"
+          style={{ color: "rgba(47, 52, 56, 0.55)" }}
         >
           Cost estimating, planning reports and project documents for sole
           practitioners and small practices in Ireland.

@@ -8,7 +8,8 @@ export default function Header() {
   return (
     <header
       data-design-id="header"
-      className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm"
+      style={{ backgroundColor: "rgba(230, 224, 214, 0.95)" }}
     >
       <div
         data-design-id="header-inner"
@@ -17,7 +18,8 @@ export default function Header() {
         <a
           href="/"
           data-design-id="header-logo"
-          className="text-[1.1rem] font-semibold tracking-tightest text-foreground uppercase"
+          className="text-[1.1rem] font-semibold tracking-tightest uppercase"
+          style={{ color: "#2F3438" }}
         >
           EMERGE
         </a>
@@ -29,14 +31,16 @@ export default function Header() {
           <a
             href="#"
             data-design-id="header-link-contact"
-            className="text-[0.82rem] tracking-wide text-foreground/70 hover:text-foreground transition-colors duration-300 uppercase"
+            className="text-[0.82rem] tracking-wide transition-colors duration-300 uppercase"
+            style={{ color: "rgba(47, 52, 56, 0.7)" }}
           >
             Contact
           </a>
           <a
             href="#"
             data-design-id="header-link-about"
-            className="text-[0.82rem] tracking-wide text-foreground/70 hover:text-foreground transition-colors duration-300 uppercase"
+            className="text-[0.82rem] tracking-wide transition-colors duration-300 uppercase"
+            style={{ color: "rgba(47, 52, 56, 0.7)" }}
           >
             About
           </a>
@@ -50,21 +54,24 @@ export default function Header() {
         >
           <span
             data-design-id="header-menu-line-1"
-            className={`block w-5 h-[1.5px] bg-foreground transition-all duration-300 ${
+            className={`block w-5 h-[1.5px] transition-all duration-300 ${
               menuOpen ? "rotate-45 translate-y-[6.5px]" : ""
             }`}
+            style={{ backgroundColor: "#2F3438" }}
           />
           <span
             data-design-id="header-menu-line-2"
-            className={`block w-5 h-[1.5px] bg-foreground transition-all duration-300 ${
+            className={`block w-5 h-[1.5px] transition-all duration-300 ${
               menuOpen ? "opacity-0" : ""
             }`}
+            style={{ backgroundColor: "#2F3438" }}
           />
           <span
             data-design-id="header-menu-line-3"
-            className={`block w-5 h-[1.5px] bg-foreground transition-all duration-300 ${
+            className={`block w-5 h-[1.5px] transition-all duration-300 ${
               menuOpen ? "-rotate-45 -translate-y-[6.5px]" : ""
             }`}
+            style={{ backgroundColor: "#2F3438" }}
           />
         </button>
       </div>
@@ -72,19 +79,22 @@ export default function Header() {
       {menuOpen && (
         <nav
           data-design-id="header-nav-mobile"
-          className="md:hidden border-t border-border bg-background px-6 py-8 flex flex-col gap-6"
+          className="md:hidden border-t px-6 py-8 flex flex-col gap-6"
+          style={{ backgroundColor: "#E6E0D6", borderColor: "rgba(47, 52, 56, 0.1)" }}
         >
           <a
             href="#"
             data-design-id="header-mobile-link-contact"
-            className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors uppercase"
+            className="text-sm tracking-wide transition-colors uppercase"
+            style={{ color: "rgba(47, 52, 56, 0.7)" }}
           >
             Contact
           </a>
           <a
             href="#"
             data-design-id="header-mobile-link-about"
-            className="text-sm tracking-wide text-foreground/70 hover:text-foreground transition-colors uppercase"
+            className="text-sm tracking-wide transition-colors uppercase"
+            style={{ color: "rgba(47, 52, 56, 0.7)" }}
           >
             About
           </a>

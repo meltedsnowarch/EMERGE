@@ -28,7 +28,7 @@ function ServiceCard({
         type="button"
         data-design-id={`${designIdPrefix}-toggle`}
         className="w-full text-left px-6 md:px-8 py-12 cursor-pointer group"
-        style={{ backgroundColor: headerBg, color: "#1A1A1A" }}
+        style={{ backgroundColor: headerBg, color: "#2F3438" }}
         onClick={() => setOpen(!open)}
       >
         <div data-design-id={`${designIdPrefix}-header`} className="flex items-start justify-between">
@@ -36,14 +36,14 @@ function ServiceCard({
             <h3
               data-design-id={`${designIdPrefix}-title`}
               className="font-serif text-[1.3rem] md:text-[1.5rem] tracking-tightest font-normal"
-              style={{ color: "#1A1A1A" }}
+              style={{ color: "#2F3438" }}
             >
               {title}
             </h3>
             <p
               data-design-id={`${designIdPrefix}-description`}
               className="mt-4 text-[0.8rem] leading-[1.7] font-serif italic"
-              style={{ color: "#1A1A1A", opacity: 0.7 }}
+              style={{ color: "#2F3438", opacity: 0.7 }}
             >
               {description}
             </p>
@@ -51,7 +51,7 @@ function ServiceCard({
           <span
             data-design-id={`${designIdPrefix}-icon`}
             className={`ml-4 shrink-0 text-[1.3rem] font-light transition-transform duration-300 ${open ? "rotate-45" : ""}`}
-            style={{ color: "#1A1A1A", opacity: 0.45 }}
+            style={{ color: "#2F3438", opacity: 0.45 }}
           >
             +
           </span>
@@ -72,19 +72,19 @@ function ServiceCard({
               <div
                 key={svc.designId}
                 data-design-id={svc.designId}
-                className="py-5 border-t border-[#1A1A1A]/10"
+                className="py-5 border-t border-[#2F3438]/10"
               >
                 <span
                   data-design-id={`${svc.designId}-name`}
                   className="text-[0.95rem] font-semibold"
-                  style={{ color: "#1A1A1A" }}
+                  style={{ color: "#2F3438" }}
                 >
                   {svc.name}
                 </span>
                 <p
                   data-design-id={`${svc.designId}-desc`}
                   className="mt-2 text-[0.8rem] leading-[1.7] font-light"
-                  style={{ color: "#2A2A2A" }}
+                  style={{ color: "#2F3438" }}
                 >
                   {svc.desc}
                 </p>
@@ -92,7 +92,7 @@ function ServiceCard({
                   href="#"
                   data-design-id={`${svc.designId}-cta`}
                   className="mt-4 inline-flex items-center justify-center text-[0.7rem] tracking-[0.12em] uppercase font-medium px-6 py-2.5 transition-colors duration-300"
-                  style={{ backgroundColor: "#D4C9BC", color: "#1A1A1A" }}
+                  style={{ backgroundColor: "#8A9A8A", color: "#2F3438" }}
                 >
                   {svc.price}
                 </a>
@@ -123,8 +123,8 @@ export default function ServiceBuckets() {
           title="EMERGE Cost"
           description="Accurate cost estimates grounded in current market data. Give your clients confidence at every stage, from feasibility through to tender."
           designIdPrefix="service-cost"
-          headerBg="#DDD8D0"
-          panelBg="#EDE9E4"
+          headerBg="#8A9A8A"
+          panelBg="#C4CFCF"
           services={[
             {
               name: "Design Stage Costing",
@@ -151,8 +151,8 @@ export default function ServiceBuckets() {
           title="EMERGE Planning"
           description="Professionally drafted planning reports and compliance documentation. Submit with confidence knowing the detail is right."
           designIdPrefix="service-planning"
-          headerBg="#C4A882"
-          panelBg="#E8D9C8"
+          headerBg="#8A9A8A"
+          panelBg="#C4CFCF"
           services={[
             {
               name: "Planning & Design Statement (Basic)",
@@ -179,8 +179,8 @@ export default function ServiceBuckets() {
           title="EMERGE Studio"
           description="Presentation-ready project documents that make the case clearly. From design reports to client proposals, we help you win the work."
           designIdPrefix="service-studio"
-          headerBg="#A8B5A0"
-          panelBg="#D8E0D4"
+          headerBg="#8A9A8A"
+          panelBg="#C4CFCF"
           services={[
             {
               name: "Feasibility Report",
