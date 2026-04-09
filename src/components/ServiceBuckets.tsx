@@ -151,7 +151,7 @@ export default function ServiceBuckets() {
           title="EMERGE Planning"
           description="Professionally drafted planning reports and compliance documentation. Submit with confidence knowing the detail is right."
           designIdPrefix="service-planning"
-          headerBg="#E8E3DE"
+          headerBg="#DDD4CA"
           panelBg="#E6E0D6"
           services={[
             {
@@ -179,7 +179,7 @@ export default function ServiceBuckets() {
           title="EMERGE Studio"
           description="Presentation-ready project documents that make the case clearly. From design reports to client proposals, we help you win the work."
           designIdPrefix="service-studio"
-          headerBg="#F0EDEA"
+          headerBg="#EAE5E1"
           panelBg="#E6E0D6"
           services={[
             {
