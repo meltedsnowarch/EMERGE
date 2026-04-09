@@ -42,7 +42,7 @@ function ServiceCard({
             </h3>
             <p
               data-design-id={`${designIdPrefix}-description`}
-              className="mt-4 text-[0.8rem] leading-[1.7] font-serif italic"
+              className="mt-4 text-[0.8rem] leading-[1.7] font-serif"
               style={{ color: "#1A1A1A", opacity: 0.7 }}
             >
               {description}
@@ -124,7 +124,7 @@ export default function ServiceBuckets() {
           description="Accurate cost estimates grounded in current market data. Give your clients confidence at every stage, from feasibility through to tender."
           designIdPrefix="service-cost"
           headerBg="#E6DED4"
-          panelBg="#E6DED4"
+          panelBg="#F0EDE8"
           services={[
             {
               name: "Design Stage Costing",
@@ -152,7 +152,7 @@ export default function ServiceBuckets() {
           description="Professionally drafted planning reports and compliance documentation. Submit with confidence knowing the detail is right."
           designIdPrefix="service-planning"
           headerBg="#EEE7E0"
-          panelBg="#EEE7E0"
+          panelBg="#F4F1ED"
           services={[
             {
               name: "Planning & Design Statement (Basic)",
@@ -180,7 +180,7 @@ export default function ServiceBuckets() {
           description="Presentation-ready project documents that make the case clearly. From design reports to client proposals, we help you win the work."
           designIdPrefix="service-studio"
           headerBg="#F5F0EB"
-          panelBg="#F5F0EB"
+          panelBg="#F7F5F2"
           services={[
             {
               name: "Feasibility Report",
