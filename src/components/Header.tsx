@@ -19,7 +19,7 @@ export default function Header() {
           href="/"
           data-design-id="header-logo"
           className="text-[1.1rem] font-semibold tracking-tightest uppercase"
-          style={{ color: "#2F3438" }}
+          style={{ color: "#1A1A1A" }}
         >
           EMERGE
         </a>
@@ -32,7 +32,7 @@ export default function Header() {
             href="#"
             data-design-id="header-link-contact"
             className="text-[0.82rem] tracking-wide transition-colors duration-300 uppercase"
-            style={{ color: "rgba(47, 52, 56, 0.7)" }}
+            style={{ color: "rgba(26, 26, 26, 0.7)" }}
           >
             Contact
           </a>
@@ -40,7 +40,7 @@ export default function Header() {
             href="#"
             data-design-id="header-link-about"
             className="text-[0.82rem] tracking-wide transition-colors duration-300 uppercase"
-            style={{ color: "rgba(47, 52, 56, 0.7)" }}
+            style={{ color: "rgba(26, 26, 26, 0.7)" }}
           >
             About
           </a>
@@ -57,21 +57,21 @@ export default function Header() {
             className={`block w-5 h-[1.5px] transition-all duration-300 ${
               menuOpen ? "rotate-45 translate-y-[6.5px]" : ""
             }`}
-            style={{ backgroundColor: "#2F3438" }}
+            style={{ backgroundColor: "#1A1A1A" }}
           />
           <span
             data-design-id="header-menu-line-2"
             className={`block w-5 h-[1.5px] transition-all duration-300 ${
               menuOpen ? "opacity-0" : ""
             }`}
-            style={{ backgroundColor: "#2F3438" }}
+            style={{ backgroundColor: "#1A1A1A" }}
           />
           <span
             data-design-id="header-menu-line-3"
             className={`block w-5 h-[1.5px] transition-all duration-300 ${
               menuOpen ? "-rotate-45 -translate-y-[6.5px]" : ""
             }`}
-            style={{ backgroundColor: "#2F3438" }}
+            style={{ backgroundColor: "#1A1A1A" }}
           />
         </button>
       </div>
@@ -80,13 +80,13 @@ export default function Header() {
         <nav
           data-design-id="header-nav-mobile"
           className="md:hidden border-t px-6 py-8 flex flex-col gap-6"
-          style={{ backgroundColor: "#E6E0D6", borderColor: "rgba(47, 52, 56, 0.1)" }}
+          style={{ backgroundColor: "#E6E0D6", borderColor: "rgba(26, 26, 26, 0.1)" }}
         >
           <a
             href="#"
             data-design-id="header-mobile-link-contact"
             className="text-sm tracking-wide transition-colors uppercase"
-            style={{ color: "rgba(47, 52, 56, 0.7)" }}
+            style={{ color: "rgba(26, 26, 26, 0.7)" }}
           >
             Contact
           </a>
@@ -94,7 +94,7 @@ export default function Header() {
             href="#"
             data-design-id="header-mobile-link-about"
             className="text-sm tracking-wide transition-colors uppercase"
-            style={{ color: "rgba(47, 52, 56, 0.7)" }}
+            style={{ color: "rgba(26, 26, 26, 0.7)" }}
           >
             About
           </a>
