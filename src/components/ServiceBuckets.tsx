@@ -124,7 +124,7 @@ export default function ServiceBuckets() {
           description="Accurate cost estimates grounded in current market data. Give your clients confidence at every stage, from feasibility through to tender."
           designIdPrefix="service-cost"
           headerBg="#D4C9BC"
-          panelBg="#E8E0D6"
+          panelBg="#E6E0D6"
           services={[
             {
               name: "Design Stage Costing",
@@ -151,8 +151,8 @@ export default function ServiceBuckets() {
           title="EMERGE Planning"
           description="Professionally drafted planning reports and compliance documentation. Submit with confidence knowing the detail is right."
           designIdPrefix="service-planning"
-          headerBg="#DDD8D0"
-          panelBg="#EDE9E4"
+          headerBg="#E8E3DE"
+          panelBg="#E6E0D6"
           services={[
             {
               name: "Planning & Design Statement (Basic)",
@@ -179,8 +179,8 @@ export default function ServiceBuckets() {
           title="EMERGE Studio"
           description="Presentation-ready project documents that make the case clearly. From design reports to client proposals, we help you win the work."
           designIdPrefix="service-studio"
-          headerBg="#E2DDD8"
-          panelBg="#EEEAE7"
+          headerBg="#F0EDEA"
+          panelBg="#E6E0D6"
           services={[
             {
               name: "Feasibility Report",
