@@ -1,73 +1,75 @@
+const STEPS = [
+  {
+    step: "01",
+    title: "Share your drawings",
+    body: "Email your project drawings, brief and any relevant details. We'll confirm the service and turnaround before we begin — usually the same day.",
+    delay: "animate-fade-up-delay-1",
+  },
+  {
+    step: "02",
+    title: "We confirm the scope",
+    body: "We review what you've sent and confirm the exact service, fixed fee and expected delivery before any work starts. No surprises.",
+    delay: "animate-fade-up-delay-2",
+  },
+  {
+    step: "03",
+    title: "Document produced within 48 hours",
+    body: "Your report is drafted with AI assistance and reviewed by an RIAI-registered architect to ensure accuracy, tone and professional quality.",
+    delay: "animate-fade-up-delay-3",
+  },
+  {
+    step: "04",
+    title: "Delivered ready to use",
+    body: "You receive a complete, professionally produced document — ready to send to your client, planning authority, or contractor.",
+    delay: "animate-fade-up-delay-4",
+  },
+] as const;
+
 export default function HowItWorks() {
   return (
     <section
       data-design-id="how-it-works"
-      className="px-6 md:px-10 lg:px-16 py-24 md:py-32 border-t border-border/60"
+      id="how-it-works"
+      className="border-t border-b border-border/60 px-6 md:px-10 lg:px-16 py-14 md:py-20"
+      style={{ background: "#F5F1EC" }}
     >
-      <h2
-        data-design-id="how-it-works-title"
-        className="font-serif text-[clamp(1.6rem,3vw,2.2rem)] tracking-tightest font-light"
+      <p
+        data-design-id="how-it-works-label"
+        className="text-[0.68rem] font-semibold uppercase tracking-widest mb-10 animate-fade-up"
+        style={{ color: "rgba(26,26,26,0.4)" }}
       >
         How it works
-      </h2>
+      </p>
 
       <div
         data-design-id="how-it-works-steps"
-        className="mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-0"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10"
       >
-        <div data-design-id="step-1" className="flex flex-col md:pr-12">
-          <div data-design-id="step-1-top" className="flex items-baseline gap-4">
-            <span
-              data-design-id="step-1-number"
-              className="text-[0.7rem] tracking-[0.16em] uppercase text-foreground/25 font-medium"
+        {STEPS.map((item) => (
+          <div key={item.step} data-design-id={`step-${item.step}`} className={item.delay}>
+            <p
+              data-design-id={`step-${item.step}-number`}
+              className="text-4xl font-bold mb-5 tracking-tight leading-none"
+              style={{ color: "rgba(26,26,26,0.12)" }}
             >
-              01
-            </span>
-            <div data-design-id="step-1-line-top" className="flex-1 h-px bg-border/50" />
-          </div>
-          <h3
-            data-design-id="step-1-title"
-            className="mt-5 font-serif text-[1.2rem] tracking-tightest font-light text-foreground/80"
-          >
-            Submit your drawings
-          </h3>
-        </div>
-
-        <div data-design-id="step-2" className="flex flex-col md:px-12 md:border-l md:border-border/40">
-          <div data-design-id="step-2-top" className="flex items-baseline gap-4">
-            <span
-              data-design-id="step-2-number"
-              className="text-[0.7rem] tracking-[0.16em] uppercase text-foreground/25 font-medium"
+              {item.step}
+            </p>
+            <h3
+              data-design-id={`step-${item.step}-title`}
+              className="text-[0.85rem] font-semibold mb-2 leading-snug"
+              style={{ color: "#1A1A1A" }}
             >
-              02
-            </span>
-            <div data-design-id="step-2-line-top" className="flex-1 h-px bg-border/50" />
-          </div>
-          <h3
-            data-design-id="step-2-title"
-            className="mt-5 font-serif text-[1.2rem] tracking-tightest font-light text-foreground/80"
-          >
-            We produce your report
-          </h3>
-        </div>
-
-        <div data-design-id="step-3" className="flex flex-col md:pl-12 md:border-l md:border-border/40">
-          <div data-design-id="step-3-top" className="flex items-baseline gap-4">
-            <span
-              data-design-id="step-3-number"
-              className="text-[0.7rem] tracking-[0.16em] uppercase text-foreground/25 font-medium"
+              {item.title}
+            </h3>
+            <p
+              data-design-id={`step-${item.step}-body`}
+              className="text-[0.82rem] leading-relaxed"
+              style={{ color: "rgba(26,26,26,0.55)" }}
             >
-              03
-            </span>
-            <div data-design-id="step-3-line-top" className="flex-1 h-px bg-border/50" />
+              {item.body}
+            </p>
           </div>
-          <h3
-            data-design-id="step-3-title"
-            className="mt-5 font-serif text-[1.2rem] tracking-tightest font-light text-foreground/80"
-          >
-            You review and issue
-          </h3>
-        </div>
+        ))}
       </div>
     </section>
   );
