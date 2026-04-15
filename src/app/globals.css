@@ -59,6 +59,47 @@ html {
 .animate-fade-up-delay-3  { animation: fadeUp 0.5s 0.24s ease-out both; }
 .animate-fade-up-delay-4  { animation: fadeUp 0.5s 0.32s ease-out both; }
 
+/* ── Service link rows ───────────────────────────────────────────────── */
+.service-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid rgba(26, 26, 26, 0.08);
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.service-row:last-child {
+  border-bottom: none;
+}
+
+.service-row:hover .service-row-title {
+  color: #715444;
+}
+
+.service-row:hover .service-row-price {
+  color: #715444;
+}
+
+.service-row-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1A1A1A;
+  line-height: 1.4;
+  transition: color 0.15s ease;
+}
+
+.service-row-price {
+  font-size: 0.75rem;
+  color: rgba(26, 26, 26, 0.55);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+  transition: color 0.15s ease;
+}
+
 /* ── WhatsApp button ─────────────────────────────────────────────────── */
 .btn-whatsapp {
   display: inline-flex;

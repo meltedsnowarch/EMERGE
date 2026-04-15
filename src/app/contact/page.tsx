@@ -44,13 +44,13 @@ export default function ContactPage() {
               </a>
             </h1>
             <p className="text-sm leading-relaxed" style={{ color: "#1A1A1A" }}>
-              James is a Dublin-based architect with over 30 years experience in
-              residential architecture. Through his practice Meltedsnow
-              Architects he has designed extensions, refurbishments and new
-              builds across Dublin and Ireland. EMERGE Studio offers
-              AI-assisted practice support for sole practitioners and small
-              practices — producing cost estimates, planning reports and project
-              documents, reviewed and signed off by a registered professional.
+              James Lawler is a Dublin-based architect with over 30 years
+              experience in residential architecture. Through his practice
+              Meltedsnow Architects he has designed extensions, refurbishments
+              and new builds across Dublin and Ireland. EMERGE Studio was set up
+              in response to increasing demands on architects for admin and
+              paperwork, utilising AI assistance to streamline certain workflows
+              within practice life in Ireland.
             </p>
           </div>
 

@@ -1,5 +1,11 @@
 import Image from "next/image";
-import ServiceBuckets from "@/components/ServiceBuckets";
+import Link from "next/link";
+import {
+  CATEGORY_ORDER,
+  CATEGORY_LABELS,
+  CATEGORY_BG,
+  getServicesByCategory,
+} from "@/lib/services";
 
 const DELAY = [
   "animate-fade-up-delay-1",
@@ -12,22 +18,22 @@ const HOW_IT_WORKS = [
   {
     step: "01",
     title: "Submit your enquiry",
-    body: "Contact me by phone or email with the property address and the service required. I will respond usually on the same day.",
+    body: "Contact me by phone or email with the service required. I will respond usually on the same day.",
   },
   {
     step: "02",
     title: "Confirm the details",
-    body: "I review the property details and confirm the exact service needed, the fixed fee, and availability for a survey.",
+    body: "I review the details and confirm the scope of service needed, the fixed fee, and availability.",
   },
   {
     step: "03",
-    title: "Survey usually within 48 hours",
-    body: "I visit the property to carry out a visual inspection of the works or to survey the boundaries and other relevant matters.",
+    title: "Process",
+    body: "I carry out the relevant report and email you a draft for review and comment.",
   },
   {
     step: "04",
-    title: "Certificate issued within 48 hours",
-    body: "The signed, certified document is issued to the homeowner, solicitor or estate agent within 48 hours.",
+    title: "Report issued within days",
+    body: "The agreed document is issued to the architect within days.",
   },
 ] as const;
 
@@ -44,14 +50,18 @@ export default function HomePage() {
 
             {/* Text — spans 2 of 3 columns */}
             <div className="md:col-span-2 animate-fade-up">
-              <h1 className="text-2xl sm:text-[1.8rem] md:text-[2.2rem] font-bold text-stone-900 tracking-tight leading-tight">
-                You trained as an architect{" "}
+              <h1
+                className="font-serif text-[clamp(2rem,5vw,3.2rem)] leading-[1.08] tracking-tightest font-light"
+                style={{ color: "#1A1A1A" }}
+              >
+                You trained as an architect
                 <br />
                 to design buildings.
-              </h1>
-              <p className="mt-4 text-sm text-stone-500 font-light leading-relaxed">
-                Architect-led practice support. Cost estimating, planning reports and project documents for sole practitioners and{" "}
                 <br />
+                <span className="italic font-normal">EMERGE handles the rest.</span>
+              </h1>
+              <p className="mt-6 text-sm text-stone-500 font-light leading-relaxed max-w-lg">
+                Architect-led practice support. Cost estimating, planning reports and project documents for sole practitioners and
                 small practices in Ireland — with a 48-hour turnaround on most services.
               </p>
             </div>
@@ -73,13 +83,62 @@ export default function HomePage() {
       </section>
 
       {/* ── SERVICES ──────────────────────────────────────────────────── */}
-      <div
+      <section
         data-design-id="services"
         id="services"
-        className="border-b border-stone-100"
+        className="border-b border-stone-100 px-6 pt-8 pb-14 sm:pt-10 sm:pb-16"
       >
-        <ServiceBuckets />
-      </div>
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {CATEGORY_ORDER.map((category, i) => {
+              const services = getServicesByCategory(category);
+              const bg = CATEGORY_BG[category];
+              return (
+                <div
+                  key={category}
+                  className={`overflow-hidden ${DELAY[i]}`}
+                  style={{ background: bg.body, border: "1px solid rgba(26,26,26,0.12)" }}
+                >
+                  {/* Header band */}
+                  <div
+                    className="px-5 py-4"
+                    style={{
+                      borderBottom: "1px solid rgba(26,26,26,0.12)",
+                      background: bg.header,
+                    }}
+                  >
+                    <p
+                      className="text-sm font-bold tracking-tight"
+                      style={{ color: "#1A1A1A" }}
+                    >
+                      {CATEGORY_LABELS[category]}
+                    </p>
+                  </div>
+
+                  {/* Service rows */}
+                  <ul className="px-5" style={{ background: bg.body }}>
+                    {services.map((service) => (
+                      <li key={service.slug}>
+                        <Link
+                          href={`/services/${service.slug}`}
+                          className="service-row"
+                        >
+                          <span className="service-row-title">
+                            {service.title}
+                          </span>
+                          <span className="service-row-price">
+                            {service.price}&ensp;&rarr;
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
       {/* ── HOW IT WORKS ──────────────────────────────────────────────── */}
       <section
@@ -123,15 +182,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── DIVIDER + FOOTER NOTE ─────────────────────────────────────── */}
-      <section data-design-id="divider" className="px-6 pt-10 pb-12">
+      {/* ── FOOTER ────────────────────────────────────────────────────── */}
+      <footer
+        data-design-id="footer"
+        className="px-6 py-10"
+        style={{ background: "#715444" }}
+      >
         <div className="max-w-5xl mx-auto">
-          <div className="w-1/3 h-px" style={{ background: "#e7e0d0" }} />
-          <p className="mt-6 text-xs text-stone-400">
+          <p className="text-xs" style={{ color: "#F5F0EB" }}>
             James Lawler &middot; RIAI Registered Member &middot; 2026
           </p>
         </div>
-      </section>
+      </footer>
     </>
   );
 }
