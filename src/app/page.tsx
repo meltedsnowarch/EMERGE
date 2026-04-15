@@ -33,7 +33,7 @@ const HOW_IT_WORKS = [
   {
     step: "04",
     title: "Report issued within days",
-    body: "The agreed document is issued to the architect within days.",
+    body: "The agreed document is issued to you within days.",
   },
 ] as const;
 
@@ -54,8 +54,7 @@ export default function HomePage() {
                 className="font-serif text-[clamp(2rem,5vw,3.2rem)] leading-[1.12] tracking-tightest font-light"
                 style={{ color: "#1A1A1A" }}
               >
-                Peer-to-peer practice support for architects.
-                <br />
+                Peer-to-peer practice support for architects.{" "}
                 <span className="italic font-normal">Less time on reports. More time on design.</span>
               </h1>
               <p className="mt-6 text-sm text-stone-500 font-light leading-relaxed max-w-lg">
@@ -186,7 +185,7 @@ export default function HomePage() {
       >
         <div className="max-w-5xl mx-auto">
           <div className="w-1/3 h-px mb-6" style={{ background: "#e7e0d0" }} />
-          <p className="text-xs" style={{ color: "#1A1A1A" }}>
+          <p className="text-xs" style={{ color: "#888888" }}>
             James Lawler &middot; RIAI Registered Member &middot; 2026
           </p>
         </div>

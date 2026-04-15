@@ -85,7 +85,7 @@ export default async function ServicePage({
               <Link
                 href="/contact"
                 className="block text-center text-sm font-semibold uppercase tracking-widest py-3 px-4 transition-opacity hover:opacity-80"
-                style={{ background: "#715444", color: "#F5F0EB" }}
+                style={{ background: "#b7b4a1", color: "#1A1A1A" }}
               >
                 Book Now
               </Link>
