@@ -51,18 +51,15 @@ export default function HomePage() {
             {/* Text — spans 2 of 3 columns */}
             <div className="md:col-span-2 animate-fade-up">
               <h1
-                className="font-serif text-[clamp(2rem,5vw,3.2rem)] leading-[1.08] tracking-tightest font-light"
+                className="font-serif text-[clamp(2rem,5vw,3.2rem)] leading-[1.12] tracking-tightest font-light"
                 style={{ color: "#1A1A1A" }}
               >
-                You trained as an architect
+                Peer-to-peer practice support for architects.
                 <br />
-                to design buildings.
-                <br />
-                <span className="italic font-normal">EMERGE handles the rest.</span>
+                <span className="italic font-normal">Less time on reports. More time on design.</span>
               </h1>
               <p className="mt-6 text-sm text-stone-500 font-light leading-relaxed max-w-lg">
-                Architect-led practice support. Cost estimating, planning reports and project documents for sole practitioners and
-                small practices in Ireland — with a 48-hour turnaround on most services.
+                Cost estimating, planning reports and project documents for sole practitioners and small practices in Ireland — with a fast turnaround on most services.
               </p>
             </div>
 
@@ -144,13 +141,13 @@ export default function HomePage() {
       <section
         data-design-id="how-it-works"
         id="how-it-works"
-        className="border-b border-blue-900 px-6 py-[3.2rem] sm:py-16"
-        style={{ background: "#1B2A4A" }}
+        className="border-b border-stone-300 px-6 py-[3.2rem] sm:py-16"
+        style={{ background: "#b7b4a1" }}
       >
         <div className="max-w-5xl mx-auto">
           <p
             className="text-xs font-semibold uppercase tracking-widest mb-10 animate-fade-up"
-            style={{ color: "#7A92B5" }}
+            style={{ color: "#3a3a3a" }}
           >
             How it works
           </p>
@@ -160,19 +157,19 @@ export default function HomePage() {
               <div key={item.step} className={DELAY[i]}>
                 <p
                   className="text-4xl font-bold mb-5 tracking-tight leading-none"
-                  style={{ color: "#2A3D5C" }}
+                  style={{ color: "rgba(26,26,26,0.18)" }}
                 >
                   {item.step}
                 </p>
                 <h3
                   className="text-sm font-semibold mb-2 leading-snug"
-                  style={{ color: "#FFFFFF" }}
+                  style={{ color: "#1A1A1A" }}
                 >
                   {item.title}
                 </h3>
                 <p
                   className="text-sm leading-relaxed"
-                  style={{ color: "#A8B8CF" }}
+                  style={{ color: "#3a3a3a" }}
                 >
                   {item.body}
                 </p>
@@ -185,11 +182,11 @@ export default function HomePage() {
       {/* ── FOOTER ────────────────────────────────────────────────────── */}
       <footer
         data-design-id="footer"
-        className="px-6 py-10"
-        style={{ background: "#715444" }}
+        className="px-6 pt-10 pb-12"
       >
         <div className="max-w-5xl mx-auto">
-          <p className="text-xs" style={{ color: "#F5F0EB" }}>
+          <div className="w-1/3 h-px mb-6" style={{ background: "#e7e0d0" }} />
+          <p className="text-xs" style={{ color: "#1A1A1A" }}>
             James Lawler &middot; RIAI Registered Member &middot; 2026
           </p>
         </div>

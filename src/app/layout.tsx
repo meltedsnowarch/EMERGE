@@ -47,14 +47,14 @@ export default function RootLayout({
         <header
           data-design-id="nav"
           className="fixed top-0 left-0 right-0 z-50 border-b"
-          style={{ background: "#715444", borderColor: "rgba(255,255,255,0.15)" }}
+          style={{ background: "#b7b4a1", borderColor: "rgba(26,26,26,0.12)" }}
         >
           <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
             <Link
               data-design-id="nav-logo"
               href="/"
-              className="text-base tracking-tight hover:opacity-80 transition-opacity"
-              style={{ color: "#F5F0EB" }}
+              className="text-base tracking-tight hover:opacity-70 transition-opacity"
+              style={{ color: "#1A1A1A" }}
             >
               <span className="font-bold">EMERGE</span>
               <span className="font-light"> Studio</span>
@@ -66,22 +66,22 @@ export default function RootLayout({
             >
               <Link
                 href="/#services"
-                className="text-sm transition-opacity hidden sm:block hover:opacity-70"
-                style={{ color: "#F5F0EB" }}
+                className="text-sm transition-opacity hidden sm:block hover:opacity-60"
+                style={{ color: "#1A1A1A" }}
               >
                 Services
               </Link>
               <Link
                 href="/#how-it-works"
-                className="text-sm transition-opacity hidden sm:block hover:opacity-70"
-                style={{ color: "#F5F0EB" }}
+                className="text-sm transition-opacity hidden sm:block hover:opacity-60"
+                style={{ color: "#1A1A1A" }}
               >
                 How it works
               </Link>
               <Link
                 href="/contact"
-                className="text-sm transition-opacity hover:opacity-70"
-                style={{ color: "#F5F0EB" }}
+                className="text-sm transition-opacity hover:opacity-60"
+                style={{ color: "#1A1A1A" }}
               >
                 Contact
               </Link>

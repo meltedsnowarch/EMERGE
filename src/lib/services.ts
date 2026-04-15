@@ -17,8 +17,8 @@ export const CATEGORY_ORDER: ServiceCategory[] = ["cost", "planning", "design"];
 
 export const CATEGORY_BG: Record<ServiceCategory, { header: string; body: string }> = {
   cost:     { header: "#E6DED4", body: "#F0EDE8" },
-  planning: { header: "#EEE7E0", body: "#F4F1ED" },
-  design:   { header: "#F5F0EB", body: "#F7F5F2" },
+  planning: { header: "#E6DED4", body: "#F4F1ED" },
+  design:   { header: "#E6DED4", body: "#F7F5F2" },
 };
 
 export const SERVICES: Service[] = [
