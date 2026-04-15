@@ -64,10 +64,43 @@ export default async function ServicePage({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
 
           {/* Left — description (2/3 width) */}
-          <div className="md:col-span-2 animate-fade-up">
-            <p className="text-sm leading-[1.8]" style={{ color: "#1A1A1A" }}>
-              JL to replace text with specific text for this category.
-            </p>
+          <div className="md:col-span-2 animate-fade-up space-y-4">
+            {/* Description paragraphs */}
+            {service.description.map((para, i) => (
+              <p key={i} className="text-sm leading-[1.8]" style={{ color: "#1A1A1A" }}>
+                {para}
+              </p>
+            ))}
+
+            {/* What you send me */}
+            <div className="pt-4">
+              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "rgba(26,26,26,0.4)" }}>
+                What you send me
+              </p>
+              <ul className="space-y-1">
+                {service.sendMe.map((item, i) => (
+                  <li key={i} className="text-sm leading-[1.8] flex gap-2" style={{ color: "#1A1A1A" }}>
+                    <span style={{ color: "rgba(26,26,26,0.3)" }}>—</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* What you get back */}
+            <div className="pt-2">
+              <p className="text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "rgba(26,26,26,0.4)" }}>
+                What you get back
+              </p>
+              <ul className="space-y-1">
+                {service.getBack.map((item, i) => (
+                  <li key={i} className="text-sm leading-[1.8] flex gap-2" style={{ color: "#1A1A1A" }}>
+                    <span style={{ color: "rgba(26,26,26,0.3)" }}>—</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Right — sidebar (1/3 width) */}

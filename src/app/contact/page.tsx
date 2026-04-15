@@ -118,6 +118,13 @@ export default function ContactPage() {
           />
         </div>
 
+        {/* ── Confidentiality statement ────────────────────────────────── */}
+        <div className="mt-8 max-w-xl animate-fade-up-delay-2">
+          <p className="text-xs leading-relaxed italic" style={{ color: "rgba(26,26,26,0.55)" }}>
+            All drawings, documents and project information submitted to EMERGE Studio are treated as strictly confidential. Your files are used solely for the purpose of preparing the agreed service and are not shared with any third party. Where AI assistance is used in preparing your document, this is carried out through an encrypted system and is not shared beyond the scope of your project. All submitted materials are permanently deleted on completion of the service being issued.
+          </p>
+        </div>
+
       </div>
     </section>
   );
