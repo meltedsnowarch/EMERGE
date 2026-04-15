@@ -51,10 +51,12 @@ export default function HomePage() {
             {/* Text — spans 2 of 3 columns */}
             <div className="md:col-span-2 animate-fade-up">
               <h1
-                className="font-serif text-[clamp(2rem,5vw,3.2rem)] leading-[1.12] tracking-tightest font-light whitespace-nowrap"
+                className="font-serif text-[clamp(2rem,5vw,3.2rem)] leading-[1.12] tracking-tightest font-light"
                 style={{ color: "#1A1A1A" }}
               >
-                Peer-to-peer practice support for architects. <span className="italic font-normal">Less time on reports. More time on design.</span>
+                Peer-to-peer practice support for architects.
+                <br />
+                <span className="italic font-normal">Less time on reports. More time on design.</span>
               </h1>
               <p className="mt-6 text-sm text-stone-500 font-light leading-relaxed max-w-lg">
                 Cost estimating, planning reports and project documents for sole practitioners and small practices in Ireland — with a fast turnaround on most services.
