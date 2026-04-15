@@ -54,8 +54,7 @@ export default function HomePage() {
                 className="font-serif text-[clamp(2rem,5vw,3.2rem)] leading-[1.12] tracking-tightest font-light"
                 style={{ color: "#1A1A1A" }}
               >
-                Peer-to-peer practice support for architects.{" "}
-                <span className="italic font-normal">Less time on reports. More time on design.</span>
+                Peer-to-peer practice support for architects. <span className="italic font-normal">Less time on reports. More time on design.</span>
               </h1>
               <p className="mt-6 text-sm text-stone-500 font-light leading-relaxed max-w-lg">
                 Cost estimating, planning reports and project documents for sole practitioners and small practices in Ireland — with a fast turnaround on most services.
@@ -156,7 +155,7 @@ export default function HomePage() {
               <div key={item.step} className={DELAY[i]}>
                 <p
                   className="text-4xl font-bold mb-5 tracking-tight leading-none"
-                  style={{ color: "rgba(26,26,26,0.18)" }}
+                  style={{ color: "#CCCCCC" }}
                 >
                   {item.step}
                 </p>

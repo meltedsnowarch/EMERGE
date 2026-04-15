@@ -79,7 +79,7 @@ export default async function ServicePage({
               <p className="text-sm text-stone-700 leading-relaxed">
                 Prepared by James Lawler, MRIAI
               </p>
-              <p className="text-sm font-semibold" style={{ color: "#715444" }}>
+              <p className="text-sm font-semibold" style={{ color: "#1A1A1A" }}>
                 {service.price}
               </p>
               <Link
