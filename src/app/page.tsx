@@ -51,7 +51,7 @@ export default function HomePage() {
             {/* Text — spans 2 of 3 columns */}
             <div className="md:col-span-2 animate-fade-up">
               <h1
-                className="font-serif text-[clamp(2rem,5vw,3.2rem)] leading-[1.12] tracking-tightest font-light"
+                className="font-serif text-[clamp(2rem,5vw,3.2rem)] leading-[1.12] tracking-tightest font-light whitespace-nowrap"
                 style={{ color: "#1A1A1A" }}
               >
                 Peer-to-peer practice support for architects. <span className="italic font-normal">Less time on reports. More time on design.</span>
